@@ -5,7 +5,7 @@ from edgetpu.classification.engine import ClassificationEngine
 
 
 # mnist.npzからテスト用画像を抽出する
-def load_data(file_path):
+def LoadData(file_path):
     with numpy.load(file_path) as f:
       # -1の部分を好きな数にすると実行する数を変更できる（最大60000）
       return f['x_train'][0:-1]
@@ -40,7 +40,7 @@ def main():
   
   count = 0
   # mnist.npzを読込読み込んだ分、画像分類を実行する
-  for input_tensor in load_data(args.npz):
+  for input_tensor in LoadData(args.npz):
     results = engine.ClassifyWithInputTensor(input_tensor=input_tensor.flatten(), threshold=0.1, top_k=3)
     # 出力オプションが真だった場合は結果を出力する
     if(args.print):
