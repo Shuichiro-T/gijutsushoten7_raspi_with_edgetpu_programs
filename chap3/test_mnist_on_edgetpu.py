@@ -22,7 +22,8 @@ def ReadLabelFile(file_path):
 def main():
   parser = argparse.ArgumentParser()
   parser.add_argument(
-    '--model', help='TensorFlow Liteモデルのファイルパス', required=True)
+    '--model',
+    help='TensorFlow Liteモデルのファイルパス', required=True)
   parser.add_argument(
     '--label', help='ラベルファイルのファイルパス', required=True)
   parser.add_argument(
