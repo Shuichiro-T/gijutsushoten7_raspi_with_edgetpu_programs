@@ -1,0 +1,3 @@
+0:raspisan
+1:gogcfs
+2:edgetpu
